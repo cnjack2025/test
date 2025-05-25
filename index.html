@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DICOM Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>DICOM Image Viewer (JavaScript)</h1>
+
+    <div class="controls">
+        <label for="dicomFile">Open DICOM File:</label>
+        <input type="file" id="dicomFile" accept=".dcm, .dicom">
+    </div>
+
+    <div class="viewer-container">
+        <canvas id="dicomCanvas"></canvas>
+        <div id="metadataDisplay">
+            <h2>Metadata</h2>
+            <p>Patient Name: <span id="patientName">N/A</span></p>
+            <p>Patient ID: <span id="patientId">N/A</span></p>
+            <p>Study Date: <span id="studyDate">N/A</span></p>
+            <p>Modality: <span id="modality">N/A</span></p>
+            <p>Series Number: <span id="seriesNumber">N/A</span></p>
+            <p>Instance Number: <span id="instanceNumber">N/A</span></p>
+        </div>
+    </div>
+
+    <div class="tool-controls">
+        <button id="resetViewButton">Reset View</button>
+        <button id="rotateCWButton">Rotate 90° CW</button>
+        <button id="rotateCCWButton">Rotate 90° CCW</button>
+        <button id="flipHorizontalButton">Flip Horizontal</button>
+        <button id="flipVerticalButton">Flip Vertical</button>
+        <p>Window Level: <input type="range" id="windowLevelSlider" min="-1000" max="1000" value="50"><span id="wlValue">50</span></p>
+        <p>Window Width: <input type="range" id="windowWidthSlider" min="1" max="2000" value="400"><span id="wwValue">400</span></p>
+    </div>
+
+    <!-- Include dicom-parser library (e.g., from unpkg CDN) -->
+    <script src="https://unpkg.com/dicom-parser@1.8.21/dist/dicomParser.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

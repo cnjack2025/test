@@ -1,0 +1,47 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.controls, .tool-controls {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.viewer-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#dicomCanvas {
+    border: 1px solid #ccc;
+    background-color: #000; /* Black background for image viewing area */
+    max-width: 600px; /* Initial constraint */
+    max-height: 600px;
+}
+
+#metadataDisplay {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-width: 250px;
+}
+
+#metadataDisplay h2 {
+    margin-top: 0;
+}
+
+label {
+    margin-right: 10px;
+}
